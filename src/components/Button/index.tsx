@@ -2,7 +2,7 @@ import React from 'react';
 
 import LoadingIndicator from '../LoadingIndicator';
 
-import {Container, Label} from './styles';
+import { Container, Label } from './styles';
 interface IButton {
   type: string;
   fontsize: number;
@@ -24,12 +24,7 @@ const Button: React.FC<IButton> = ({
   disabled = false,
   margin = '0',
 }) => (
-  <Container
-    type={type}
-    style={style}
-    onPress={onPress}
-    disabled={disabled}
-    margin={margin}>
+  <Container type={type} style={style} onPress={onPress} disabled={disabled} margin={margin}>
     {loading ? (
       <LoadingIndicator color="#262a3a" />
     ) : (
