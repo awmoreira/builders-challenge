@@ -17,6 +17,9 @@ const Colors = {
   success: '#06A75C',
   warning: '#ED0000',
   orange: '#FF6900',
+  primary: '#ffc107',
+  secondary: '#000',
+  transparent: 'transparent',
 };
 
 export default Colors;

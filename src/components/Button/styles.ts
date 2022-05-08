@@ -43,6 +43,6 @@ export const Label = styled.Text<ILabel>`
       ? theme.colors.text
       : theme.colors.text};
   text-align: center;
-  font-family: ${({ theme }) => theme.fonts[700]};
+  font-family: ${({ theme }) => theme.fonts.SourceSansPro[700]};
   margin: 0px 10px;
 `;

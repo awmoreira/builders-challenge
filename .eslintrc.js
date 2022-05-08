@@ -33,13 +33,17 @@ module.exports = {
     'react/prop-types': 'off',
     'prettier/prettier': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'error',
+    '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-return': 'error',
   },
   settings: {
     react: {
       version: 'detect',
     },
     'import/resolver': {
-      typescript: {},
+      node: {
+        extensions: ['.ts', '.tsx'],
+      },
       'babel-plugin-root-import': {
         rootPathPrefix: '~',
         rootPathSuffix: 'src',

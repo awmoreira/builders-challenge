@@ -5,13 +5,13 @@ import LoadingIndicator from '../LoadingIndicator';
 import { Container, Label } from './styles';
 interface IButton {
   type: string;
-  fontsize: number;
-  style: object;
+  fontsize?: number;
+  style?: object;
   label: string;
   onPress: () => void;
-  loading: boolean;
-  disabled: boolean;
-  margin: string;
+  loading?: boolean;
+  disabled?: boolean;
+  margin?: string;
 }
 
 const Button: React.FC<IButton> = ({
