@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import Button from '~/components/Button';
 
 export const Container = styled.View`
   flex: 1;
@@ -6,48 +7,18 @@ export const Container = styled.View`
 `;
 
 export const WrapperTop = styled.View`
-  height: 50%;
+  padding-top: ${({ theme }) => theme.metrics.statusHeight + 34}px;
+  padding-bottom: 34px;
   align-items: center;
   justify-content: center;
 `;
 export const WrapperMiddle = styled.View`
-  height: 20%;
-  padding-horizontal: 20px;
-`;
-export const WrapperBottom = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
 `;
-
-export const BoxWeather = styled.View`
-  width: 100%;
-  height: 100%;
-  background: ${({ theme }) => theme.colors.white};
-  shadow-color: '#000';
-  text-shadow-offset: 0px 2px;
-  shadow-opacity: 0.25;
-  shadow-radius: 3.84px;
-  elevation: 5;
-  border-radius: 30px;
-
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-
-  padding: 20px;
-`;
-
-export const LineVertical = styled.View`
-  background-color: ${({ theme }) => theme.colors.primary};
-  height: 100%;
-  width: 5px;
-  border-radius: 5px;
-`;
-
-export const BoxInfo = styled.View`
-  flex-direction: column;
-  width: 50%;
+export const WrapperBottom = styled.View`
+  flex: 1;
   align-items: center;
   justify-content: center;
 `;
@@ -69,16 +40,27 @@ export const AnyText = styled.Text<IAnyText>`
   color: ${({ color }) => color ?? '#000'};
 `;
 
-export const IconWeather = styled.Image`
-  width: 200px;
-  height: 200px;
+export const UpdateButton = styled(Button)``;
+
+export const TagMinMax = styled.View`
+  width: 75px;
+  height: 129px;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 49px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 13px;
+`;
+export const WrapperTags = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const UpdateButton = styled.TouchableOpacity`
-  position: absolute;
-  top: 10px;
-  left: 25px;
-  border-width: 1px;
-  border-color: ${({ theme }) => theme.colors.primary};
-  border-radius: 5px;
+export const Line = styled.View`
+  width: 36px;
+  height: 1px;
+  background-color: ${({ theme }) => theme.colors.black};
 `;

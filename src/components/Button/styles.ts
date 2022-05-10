@@ -23,12 +23,6 @@ export const Container = styled.TouchableOpacity<IContainer>`
   justify-content: center;
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   margin: ${({ margin }) => margin};
-  ${({ type }) =>
-    type === 'secondary' &&
-    css`
-      border-width: 2px;
-      border-color: ${({ theme }) => theme.colors.primary};
-    `};
 
   padding: 18px 30px;
 `;
@@ -45,7 +39,7 @@ export const Label = styled.Text<ILabel>`
     type === 'primary'
       ? theme.colors.black
       : type === 'secondary'
-      ? theme.colors.text
+      ? theme.colors.black
       : theme.colors.text};
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.SourceSansPro[400]};
