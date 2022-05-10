@@ -34,7 +34,7 @@ const Home: React.FC = () => {
     }
   }, [location]);
 
-  if (weather === null)
+  if (weather === null || weather === undefined)
     return (
       <Container>
         <WrapperTop>
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
           </BoxInfo>
           <LineVertical />
           <BoxInfo>
-            <AnyText size={16}>{dayWeek.charAt(0).toUpperCase() + dayWeek.slice(1)}</AnyText>
+            <AnyText size={16}>{dayWeek?.charAt(0).toUpperCase() + dayWeek?.slice(1)}</AnyText>
             <AnyText size={16}>
               {formatTz(weather?.dt, 'dd/MM/yyyy', {
                 timeZone: 'America/Sao_Paulo',

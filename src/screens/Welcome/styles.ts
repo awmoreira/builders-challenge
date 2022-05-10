@@ -1,30 +1,23 @@
-import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
-import theme from '../../theme';
+import Button from '~/components/Button';
 
-export const Container = styled(LinearGradient).attrs({
-  colors: theme.colors.gradients.background,
-})`
+export const Container = styled.View`
   flex: 1;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 export const WrapperTop = styled.View`
-  width: 100%;
-  height: 60%;
+  flex: 1;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 74px;
+  padding-horizontal: 77px;
 `;
+
 export const WrapperBottom = styled.View`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  padding: 32px;
-  padding-bottom: ${({ theme }) => theme.metrics.marginBottom + 32}px;
+  width: 375px;
+  height: 271px;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 40%;
-  align-items: center;
-  justify-content: center;
 `;
 
 interface IAnyText {
@@ -33,6 +26,7 @@ interface IAnyText {
   margin?: string;
   padding?: string;
   color?: string;
+  align?: string;
 }
 
 export const AnyText = styled.Text<IAnyText>`
@@ -42,8 +36,18 @@ export const AnyText = styled.Text<IAnyText>`
   padding: ${({ padding }) => padding ?? 0};
   font-family: ${({ theme }) => theme.fonts.SourceSansPro[500]};
   color: ${({ color }) => color ?? '#000'};
+  text-align: ${({ align }) => align ?? 'left'};
 `;
 
-export const WrapperButtons = styled.View`
-  flex-direction: column;
+export const AvatarImage = styled.Image`
+  height: 104px;
+  width: 104px;
+  margin-top: 54px;
+`;
+
+export const ButtonWeather = styled(Button)``;
+
+export const FooterImage = styled.Image`
+  height: 100%;
+  width: 100%;
 `;

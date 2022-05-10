@@ -1,10 +1,19 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import Button from '~/components/Button';
-
-import { Container, WrapperTop, WrapperBottom, AnyText } from './styles';
-import { Weather } from '~/assets/svgs';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  Container,
+  WrapperTop,
+  WrapperBottom,
+  AnyText,
+  ButtonWeather,
+  AvatarImage,
+  FooterImage,
+} from './styles';
 import useLocation from '~/hooks/useLocation';
+
+import { Avatar, Footer } from '~/assets/images';
 
 const Welcome: React.FC = () => {
   const navigation = useNavigation();
@@ -17,26 +26,24 @@ const Welcome: React.FC = () => {
   return (
     <Container>
       <WrapperTop>
-        <AnyText size={28} weight="bold" margin="0 0 30px">
-          Seja bem-vindo
+        <AvatarImage source={Avatar} />
+        <AnyText size={30} weight="bold" margin="32px 0 23px" align="center">
+          App Allan do Tempo
         </AnyText>
-        <AnyText size={16} margin="0 0 30px">
-          Aqui o tempo é todo seu...
+        <AnyText size={17} weight="300" margin="0 0 30px" align="center">
+          Os dados climáticos da sua localização ao apertar de um botão.
         </AnyText>
-        <Weather width={200} height={200} color="#748C94" />
-      </WrapperTop>
-      <WrapperBottom>
-        <AnyText size={20} margin="0 0 50px">
-          Olá! ;)
-        </AnyText>
-        <Button
-          type="secondary"
-          label="Buscar dados climáticos"
+        <ButtonWeather
+          type="primary"
+          label="ver previsão do tempo"
           onPress={gotToWeather}
-          style={{
-            width: '100%',
-          }}
+          radius="32px"
+          icon={<FontAwesomeIcon icon={faArrowRight} size={14} />}
         />
+      </WrapperTop>
+
+      <WrapperBottom>
+        <FooterImage source={Footer} />
       </WrapperBottom>
     </Container>
   );

@@ -1,11 +1,8 @@
 import styled from 'styled-components/native';
-import LinearGradient from 'react-native-linear-gradient';
-import theme from '~/theme';
 
-export const Container = styled(LinearGradient).attrs({
-  colors: theme.colors.gradients.background,
-})`
+export const Container = styled.View`
   flex: 1;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const WrapperTop = styled.View`

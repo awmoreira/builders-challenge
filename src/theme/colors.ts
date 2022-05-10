@@ -1,7 +1,8 @@
 const Colors = {
   gradients: {
-    background: ['#FFFFFF', '#ffc107'],
+    background: ['#FFFFFF', '#EFB743'],
   },
+  background: '#EFB743',
   gray: {
     100: '#E1E3E7',
     200: '#999999',

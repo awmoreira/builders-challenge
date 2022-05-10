@@ -3,6 +3,7 @@ import React from 'react';
 import LoadingIndicator from '../LoadingIndicator';
 
 import { Container, Label } from './styles';
+
 interface IButton {
   type: string;
   fontsize?: number;
@@ -12,6 +13,8 @@ interface IButton {
   loading?: boolean;
   disabled?: boolean;
   margin?: string;
+  radius?: string;
+  icon?: React.ReactNode;
 }
 
 const Button: React.FC<IButton> = ({
@@ -23,14 +26,26 @@ const Button: React.FC<IButton> = ({
   loading = false,
   disabled = false,
   margin = '0',
+  radius = '10px',
+  icon = null,
 }) => (
-  <Container type={type} style={style} onPress={onPress} disabled={disabled} margin={margin}>
+  <Container
+    type={type}
+    style={style}
+    onPress={onPress}
+    disabled={disabled}
+    margin={margin}
+    radius={radius}
+  >
     {loading ? (
       <LoadingIndicator color="#262a3a" />
     ) : (
-      <Label type={type} fontsize={fontsize}>
-        {label}
-      </Label>
+      <>
+        {icon}
+        <Label type={type} fontsize={fontsize} icon={!!icon}>
+          {label}
+        </Label>
+      </>
     )}
   </Container>
 );
