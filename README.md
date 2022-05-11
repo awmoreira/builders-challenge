@@ -7,9 +7,9 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-basic.svg)](https://img.shields.io/github/issues/awmoreira/builders-challenge)
-[![GitHub last commit](https://img.shields.io/badge/last%20commit-11%2F05%2F2022-red)](https://github.com/awmoreira/builders-challenge/commits/main)
-[![NPM](https://img.shields.io/npm/l/react-native-template-rocketseat-basic.svg)](https://choosealicense.com/licenses/mit)
+<a href="https://github.com/awmoreira/builders-challenge/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/awmoreira/builders-challenge"></a>
+<a href="https://img.shields.io/github/issues/awmoreira/builders-challenge"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-basic.svg"></a>
+<a href="https://choosealicense.com/licenses/mit"><img alt="GitHub issues" src="https://img.shields.io/npm/l/react-native-template-rocketseat-basic.svg"></a>
 
 <!-- PROJECT LOGO -->
 <br />
