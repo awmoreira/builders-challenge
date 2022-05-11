@@ -4,14 +4,12 @@ import { format as formatTz } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
-  faCloudMoon,
-  faCloudMoonRain,
-  faCloudRain,
-  faCloudSunRain,
   faArrowRotateRight,
   faTemperatureArrowDown,
   faTemperatureArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
+
+import { weatherConditions } from './helper';
 
 import {
   Container,
@@ -42,74 +40,69 @@ const Home: React.FC = () => {
     }
   }, [location]);
 
-  // if (weather === null || weather === undefined)
-  //   return (
-  //     <Container>
-  //       <WrapperTop>
-  //         <LoadingIndicator size="large" />
-  //       </WrapperTop>
-  //     </Container>
-  //   );
+  if (weather === null || weather === undefined)
+    return (
+      <Container>
+        <WrapperTop>
+          <LoadingIndicator size="large" />
+        </WrapperTop>
+      </Container>
+    );
 
-  // const dayWeek = format(weather?.dt, 'EEEE', {
-  //   locale: pt,
-  // });
+  const dayWeek = format(weather?.dt, 'EEEE', {
+    locale: pt,
+  });
 
   return (
     <Container>
       <WrapperTop>
         <AnyText size={21} weight="600">
-          {/* {weather?.name} */}
-          São José dos Pinhais
+          {weather?.name}
         </AnyText>
-        <AnyText size={17} weight="300">
-          {/* {weather?.sys?.country === 'BR' ? 'Brasil' : weather?.sys?.country} */}
-          Brasil
+        <AnyText size={17} weight="400">
+          {weather?.sys?.country === 'BR' ? 'Brasil' : weather?.sys?.country}
         </AnyText>
       </WrapperTop>
       <WrapperMiddle>
         <AnyText size={103} weight="600">
-          {/* {`${weather?.main?.temp.toFixed(0)}°`} */}
-          14°c
+          {`${weather?.main?.temp.toFixed(0)}°c`}
         </AnyText>
-        <FontAwesomeIcon icon={faCloudMoon} size={158} />
-        <AnyText size={21} weight="300" margin="11px 0">
-          {/* {weather?.weather[0].main} */}
-          Nublado
+        <FontAwesomeIcon
+          icon={weatherConditions[weather?.weather[0]?.main ?? 'default']}
+          size={158}
+        />
+        <AnyText size={21} weight="400" margin="11px 0">
+          {weather?.weather[0].main}
         </AnyText>
         <AnyText size={17} weight="500">
-          {/* {dayWeek?.charAt(0).toUpperCase() + dayWeek?.slice(1)} */}
-          Segunda-feira
+          {dayWeek?.charAt(0).toUpperCase() + dayWeek?.slice(1)}
         </AnyText>
-        <AnyText size={11} weight="300" margin="4px 0">
-          {/* {formatTz(weather?.dt, 'dd/MM/yyyy', {
+        <AnyText size={12} weight="400" margin="4px 0">
+          {formatTz(weather?.dt, 'dd/MM/yyyy', {
             timeZone: 'America/Sao_Paulo',
-          })} */}
-          (08/05/2022)
+          })}
         </AnyText>
       </WrapperMiddle>
       <WrapperBottom>
         <WrapperTags>
           <TagMinMax>
             <FontAwesomeIcon icon={faTemperatureArrowDown} size={21} />
-            <AnyText size={11} weight="300" margin="4px 0">
+            <AnyText size={11} weight="400" margin="4px 0">
               Mínima
             </AnyText>
             <Line />
             <AnyText size={18} weight="700" margin="4px 0">
-              {/* {`${weather?.main?.temp_min.toFixed(0)}°`} */}
-              14º
+              {`${weather?.main?.temp_min.toFixed(0)}°`}
             </AnyText>
           </TagMinMax>
           <TagMinMax>
             <FontAwesomeIcon icon={faTemperatureArrowUp} size={21} />
-            <AnyText size={11} weight="300" margin="4px 0">
+            <AnyText size={11} weight="400" margin="4px 0">
               Máxima
             </AnyText>
             <Line />
             <AnyText size={18} weight="700" margin="4px 0">
-              {/* {`${weather?.main?.temp_max.toFixed(0)}°`} */}
-              15º
+              {`${weather?.main?.temp_max.toFixed(0)}°`}
             </AnyText>
           </TagMinMax>
         </WrapperTags>
