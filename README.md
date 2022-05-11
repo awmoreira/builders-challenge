@@ -17,8 +17,7 @@
    <h3 align="center">Builders Challenge App (React Native)</h3>
 </p>
 <p align="center">
-   <a href="https://ibb.co/zZ9WpQB"><img src="https://i.ibb.co/hVQxbL4/Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-45.png" alt="Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-45" border="0"></a>
-    <a href="https://ibb.co/6J2ZpWx"><img src="https://i.ibb.co/bRx3yKZ/Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-54.png" alt="Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-54" border="0"></a>
+   <a href="https://ibb.co/zZ9WpQB"><img src="https://i.ibb.co/zZ9WpQB/Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-45.png" alt="Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-45" border="0"></a> <a href="https://ibb.co/6J2ZpWx"><img src="https://i.ibb.co/6J2ZpWx/Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-54.png" alt="Simulator-Screen-Shot-i-Phone-13-2022-05-10-at-23-33-54" border="0"></a>
 </p>
 
 <!-- ABOUT THE PROJECT -->
