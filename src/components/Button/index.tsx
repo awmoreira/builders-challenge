@@ -5,6 +5,7 @@ import LoadingIndicator from '../LoadingIndicator';
 import { Container, Label } from './styles';
 
 interface IButton {
+  testID?: string;
   type: string;
   fontsize?: number;
   style?: object;
@@ -18,6 +19,7 @@ interface IButton {
 }
 
 const Button: React.FC<IButton> = ({
+  testID,
   type = 'primary',
   fontsize = 14,
   label = 'Informe o texto do botão',
@@ -30,6 +32,7 @@ const Button: React.FC<IButton> = ({
   icon = null,
 }) => (
   <Container
+    testID={testID}
     type={type}
     style={style}
     onPress={onPress}

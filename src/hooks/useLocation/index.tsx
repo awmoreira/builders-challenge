@@ -2,7 +2,16 @@ import { useState, useEffect } from 'react';
 import Geolocation, { GeolocationResponse } from '@react-native-community/geolocation';
 import { Alert } from 'react-native';
 
-export default function useLocation() {
+interface ICoords {
+  latitude: number;
+  longitude: number;
+}
+export interface ILocation {
+  getLocationNow: () => ICoords;
+  location: ICoords;
+}
+
+const useLocation = () => {
   const [location, setLocation] = useState<GeolocationResponse | undefined>();
 
   function getLocationNow() {
@@ -21,4 +30,6 @@ export default function useLocation() {
   }, []);
 
   return { location, getLocationNow };
-}
+};
+
+export default useLocation;

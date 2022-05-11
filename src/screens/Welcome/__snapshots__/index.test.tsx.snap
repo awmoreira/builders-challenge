@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Indicator Component should render component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#EFB743",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexBasis": 0,
+          "flexDirection": "column",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "paddingHorizontal": 77,
+          "paddingTop": 74,
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/images/avatar.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "height": 104,
+            "marginTop": 54,
+            "width": 104,
+          },
+        ]
+      }
+    />
+    <Text
+      align="center"
+      margin="32px 0 23px"
+      size={30}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontFamily": "SourceSansPro-Regular",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "marginBottom": 23,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 32,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "textAlign": "center",
+          },
+        ]
+      }
+      weight="bold"
+    >
+      App Allan do Tempo
+    </Text>
+    <Text
+      align="center"
+      margin="0 0 30px"
+      size={17}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontFamily": "SourceSansPro-Regular",
+            "fontSize": 17,
+            "fontWeight": "300",
+            "marginBottom": 30,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 0,
+            "textAlign": "center",
+          },
+        ]
+      }
+      weight="300"
+    >
+      Os dados climáticos da sua localização ao apertar de um botão.
+    </Text>
+    <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 32,
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "justifyContent": "center",
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "maxHeight": 60,
+          "minHeight": 60,
+          "opacity": 1,
+          "paddingBottom": 18,
+          "paddingLeft": 30,
+          "paddingRight": 30,
+          "paddingTop": 18,
+        }
+      }
+      testID="button-see-weather"
+    >
+      <
+        icon={
+          Object {
+            "icon": Array [
+              448,
+              512,
+              Array [
+                8594,
+              ],
+              "f061",
+              "M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z",
+            ],
+            "iconName": "arrow-right",
+            "prefix": "fas",
+          }
+        }
+        size={14}
+      />
+      <Text
+        fontsize={14}
+        icon={true}
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontFamily": "SourceSansPro-Light",
+              "fontSize": 14,
+              "paddingLeft": 10,
+              "textAlign": "center",
+            },
+          ]
+        }
+        type="primary"
+      >
+        ver previsão do tempo
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "height": 271,
+          "position": "absolute",
+          "width": 375,
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/images/footer.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;

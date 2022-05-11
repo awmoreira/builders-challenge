@@ -17,10 +17,10 @@ import { Avatar, Footer } from '~/assets/images';
 
 const Welcome: React.FC = () => {
   const navigation = useNavigation();
-  const { location } = useLocation();
+  useLocation();
 
   function gotToWeather() {
-    navigation.navigate('Home', { location });
+    navigation.navigate('Home');
   }
 
   return (
@@ -34,6 +34,7 @@ const Welcome: React.FC = () => {
           Os dados climáticos da sua localização ao apertar de um botão.
         </AnyText>
         <ButtonWeather
+          testID="button-see-weather"
           type="primary"
           label="ver previsão do tempo"
           onPress={gotToWeather}

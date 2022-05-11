@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 import Button from '~/components/Button';
 
 export const Container = styled.View`
@@ -6,11 +6,16 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.background};
 `;
 
-export const WrapperTop = styled.View`
+export const WrapperTop = styled.View<{ isLoading?: boolean }>`
   padding-top: ${({ theme }) => theme.metrics.statusHeight + 34}px;
   padding-bottom: 34px;
   align-items: center;
   justify-content: center;
+  ${({ isLoading }) =>
+    isLoading &&
+    css`
+      flex: 1;
+    `}
 `;
 export const WrapperMiddle = styled.View`
   flex: 1;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Indicator Component should render component 1`] = `
+<ActivityIndicator
+  color="#fff"
+  size="small"
+/>
+`;

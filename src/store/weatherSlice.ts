@@ -1,7 +1,7 @@
 import { GetState, SetState } from 'zustand';
 import { MyState } from './index';
 import api from '~/services/api';
-import { API_TOKEN } from 'react-native-dotenv';
+import { API_KEY } from 'react-native-dotenv';
 
 interface ICoord {
   latitude: number;
@@ -54,12 +54,13 @@ interface IWeather {
 export interface IWeatherSlice {
   weather: IWeather | null;
   setWeather: (location: ICoord) => void;
+  isLoading: boolean;
 }
 
 export async function getWeather(location: ICoord) {
   try {
     const { data } = await api.get(
-      `weather?lat=${location.latitude}&lon=${location.longitude}&appid=${API_TOKEN}&units=metric&lang=pt_br`,
+      `weather?lat=${location.latitude}&lon=${location.longitude}&appid=${API_KEY}&units=metric&lang=pt_br`,
     );
     return data;
   } catch (err) {
@@ -69,9 +70,11 @@ export async function getWeather(location: ICoord) {
 
 const createWeatherSlice = (set: SetState<MyState>, get: GetState<MyState>) => ({
   weather: null,
+  isLoading: false,
   setWeather: async (location: ICoord) => {
+    set(() => ({ isLoading: true }));
     const weather = await getWeather(location);
-    set(() => ({ weather }));
+    set(() => ({ weather, isLoading: false }));
   },
 });
 

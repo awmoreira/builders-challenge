@@ -27,7 +27,7 @@ import useLocation from '~/hooks/useLocation';
 import LoadingIndicator from '~/components/LoadingIndicator';
 
 const Home: React.FC = () => {
-  const { weather, setWeather } = useStore();
+  const { weather, setWeather, isLoading } = useStore();
 
   const { getLocationNow, location } = useLocation();
 
@@ -40,10 +40,10 @@ const Home: React.FC = () => {
     }
   }, [location]);
 
-  if (weather === null || weather === undefined)
+  if (weather === null || weather === undefined || isLoading)
     return (
       <Container>
-        <WrapperTop>
+        <WrapperTop isLoading>
           <LoadingIndicator size="large" />
         </WrapperTop>
       </Container>
