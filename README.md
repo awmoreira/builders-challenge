@@ -8,8 +8,8 @@
 <!-- PROJECT SHIELDS -->
 
 <a href="https://github.com/awmoreira/builders-challenge/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/awmoreira/builders-challenge"></a>
-<a href="https://img.shields.io/github/issues/awmoreira/builders-challenge"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-basic.svg"></a>
-<a href="https://choosealicense.com/licenses/mit"><img alt="GitHub issues" src="https://img.shields.io/npm/l/react-native-template-rocketseat-basic.svg"></a>
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/awmoreira/builders-challenge">
+<img alt="GitHub" src="https://img.shields.io/github/license/awmoreira/builders-challenge">
 
 <!-- PROJECT LOGO -->
 <br />
